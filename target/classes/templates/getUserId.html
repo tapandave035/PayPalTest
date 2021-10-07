@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>PayPal Checkout Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Enter your PayPal UserId to get transaction history</h1>
+    <form action="#" th:action="@{/getUserId}" th:object="${getUserId}" method="post">
+    
+ 	    <p>PayPal UserId: <input type="text" th:field="*{id}" /></p>
+   
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+</body>
+</html>

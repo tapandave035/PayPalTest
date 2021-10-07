@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>PayPal Checkout Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>PayPal User Registration</h1>
+    <form action="#" th:action="@{/checkout}" th:object="${checkout}" method="post">
+    
+    	<p>PayPal UserId: <input type="text" th:field="*{userId}" /></p>
+    	<p>Name: <input type="text" th:field="*{name}" /></p>
+    	<p>Amount: <input type="text" th:field="*{amount}" /></p>
+    	<p>Currency</p>
+    	<input type="radio" id="inr" name="currency" value="INR" th:field="*{currency}">
+	    <label for="inr">INR</label><br>
+        <input type="radio" id="usd" name="currency" value="USD" th:field="*{currency}">
+        <label for="usd">USD</label><br>
+    	
+    	<p>Please select Payment Mode</p>
+   		<input type="radio" id="pp" name="mode" value="PayPal" th:field="*{paymentMode}">
+ 	    <label for="pp">PayPal</label><br>
+        <input type="radio" id="cc" name="mode" value="Credit Card" th:field="*{paymentMode}">
+        <label for="cc">Credit Card</label><br>
+  		<input type="radio" id="dc" name="mode" value="Debit Card" th:field="*{paymentMode}">
+        <label for="dc">Debit Card</label>
+    	
+        <p><input type="submit" value="Pay" /></p>
+    </form>
+</body>
+</html>

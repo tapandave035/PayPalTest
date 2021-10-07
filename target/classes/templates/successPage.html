@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>PayPal Transaction Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Transaction Success</h1>
+    <p th:text="'PayPal UserId: ' + ${checkout.userId}" />
+    <p th:text="'Name: ' + ${checkout.name}" />
+    <p th:text="'Amount: ' + ${checkout.amount}" />  
+    <p th:text="'Currency: ' + ${checkout.currency}" />
+    <p th:text="'PaymentMode: ' + ${checkout.paymentMode}" />
+    
+    
+    <a href="/">Go to home Page</a>
+</body>
+</html>

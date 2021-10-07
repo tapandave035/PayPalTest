@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Welcome</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}"/>
+   </head>
+   <body>
+      <h1>Please Find below Transactions List :</h1>
+         
+         <table> 
+      <tr th:each="getUserId : ${getUserIdList}">
+            <td th:text="${getUserId.name}">1</td>
+            <td th:text="${getUserId.amount}">Text ...</td>
+        </tr>
+        </table>
+      <br><br><br>
+      <div>
+      <a th:href="@{/}">Go Back to Home Page</a>     
+      </div>  
+   </body>
+</html>
